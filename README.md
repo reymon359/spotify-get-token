@@ -1,9 +1,8 @@
-# Notas:
+# spotify-get-token:
 
-Este es un pequeño servidor de express listo para ejecutarse y servir la carpeta public en la web.
+A node.js express server to get the spotify token for spotify releases.
 
-Recuerden que deben de reconstruir los módulos de node con el comando
+Put your client and secret id and woala!
 
-```
-npm install
-```
+
+``` npm install ``` and ``` npm start ```  to run it
