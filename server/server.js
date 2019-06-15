@@ -1,11 +1,3 @@
-/*
-    Spotify API Token server
-        Esta aplicación únicamente toma el CLIENTID y CLIENTSecret
-        que brinda spotify, para obtener el token mediante una petición
-        POST desde el front-end. 
-
-*/
-
 const express = require('express');
 const request = require('request');
 const path = require('path');
@@ -26,10 +18,8 @@ app.use(function(req, res, next) {
 
 
 app.get('/spotify', (req, resp) => {
-    console.log('enters');
     let client_id = req.params.client_id;
     let client_secret = req.params.client_secret;
-
 
 
     let spotifyUrl = 'https://accounts.spotify.com/api/token';
@@ -51,7 +41,7 @@ app.get('/spotify', (req, resp) => {
         if (err) {
             return resp.status(400).json({
                 ok: false,
-                mensaje: 'No se pudo obtener el token',
+                mensaje: 'Could not get the token',
                 err
             })
         }
@@ -67,6 +57,6 @@ app.listen(port, (err) => {
 
     if (err) throw new Error(err);
 
-    console.log(`Servidor corriendo en puerto ${ port }`);
+    console.log(`Server running on port ${ port }`);
 
 });
