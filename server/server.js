@@ -18,8 +18,10 @@ app.use(function(req, res, next) {
 
 
 app.get('/spotify', (req, resp) => {
-    let client_id = req.params.client_id;
-    let client_secret = req.params.client_secret;
+    let client_id = 'YOUR CLIENT ID';
+    let client_secret = 'YOUR CLIENT SECRET ID';
+
+
 
     let spotifyUrl = 'https://accounts.spotify.com/api/token';
 
